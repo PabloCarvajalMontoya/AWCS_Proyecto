@@ -1,453 +1,528 @@
 /*Documento de css*/
-body{
-	font-family:'Indie Flower', cursive;
-	font-size:16px;
+body {
+	font-family: 'Indie Flower', cursive;
+	font-size: 16px;
 	background-color: #3b3b3b;
 }
-footer{
-	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
 
-	color:#FFFFFF;
+footer {
+	background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 0)));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#007db9e8', GradientType=0);
+	/* IE6-9 */
+
+	color: #FFFFFF;
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
 	font-size: 0.8em;
-	margin-top: 2px;		
+	margin-top: 2px;
 }
 
-header{
-	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+header {
+	background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 0)));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#007db9e8', GradientType=0);
+	/* IE6-9 */
 }
-header{
+
+header {
 	margin-bottom: 60px;
-	text-align:right;
+	text-align: right;
 }
-header figure{
-	float:left;
-	margin-left:100px;
+
+header figure {
+	float: left;
+	margin-left: 100px;
 }
-header figure img{
-	width:60px;
-	height:60px;
-	border-radius:50%;
+
+header figure img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
 }
-header h1{
-	color:#81BEF7;
-	float:left;
-	font-size:1.6em;
+
+header h1 {
+	color: #81BEF7;
+	float: left;
+	font-size: 1.6em;
 	display: block;
-	margin:7px 80px 0 50px;
-	padding:0px;
+	margin: 7px 80px 0 50px;
+	padding: 0px;
 }
+
 /*
 -----------------
 Menu
 -----------------
 */
-header nav ul{
-	padding:0;
-	margin:0;
-	text-align:center;
-	list-style:none;
+header nav ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	list-style: none;
 }
-header nav li{
-	height:35px;
-	margin-top:10px;
-	width:100%;
-	display:inline-block;/*acomoda uno detras de otro*/
+
+header nav li {
+	height: 35px;
+	margin-top: 10px;
+	width: 100%;
+	display: inline-block;
+	/*acomoda uno detras de otro*/
 }
-header nav ul li a{
-	text-decoration:none;
-	font-weight:bold;
-	color:#81BEF7;
-	padding:15px 25px;
+
+header nav ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #81BEF7;
+	padding: 15px 25px;
 }
+
 /*
 ------------------------
 contenido fondo
 ------------------
 */
-section{
+section {
 	background-color: #999999;
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
+
 /*
 --------------------
 Contenido articulos
 ---------------------
 */
 /*forma del articulo principal*/
-section article.heroe{
-	border-width:2px;
-	border-style:solid;
-	display:inline-block; /*coloca 2 lineas*/
-	position:relative; /*convierte en padre para los elementos internos*/
-	vertical-align:top;/*alinea los elementos arriba y no deja espacio entre los articulos*/
-	border-radius:0px 0px 15px 15px;
-	margin:50px 0px 20px 10%;
-	width:85%;
-	font-size:1.2em;
+section article.recomienda {
+	border-width: 2px;
+	border-style: solid;
+	display: inline-block;
+	/*coloca 2 lineas*/
+	position: relative;
+	/*convierte en padre para los elementos internos*/
+	vertical-align: top;
+	/*alinea los elementos arriba y no deja espacio entre los articulos*/
+	border-radius: 0px 0px 15px 15px;
+	margin: 50px 0px 20px 10%;
+	width: 85%;
+	font-size: 1.2em;
 }
+
 /*imagen superior*/
-section article.heroe figure{
-	float:left;
-	margin-top:-50px;
-	margin-left:30px;
+section article.recomienda figure {
+	float: left;
+	margin-top: -50px;
+	margin-left: 30px;
 }
-section article.heroe figure img{
-	border-radius:50%;
-	border-width:5px;
-	border-style:solid;
-	width:180px;
-	height:140px;
+
+section article.recomienda figure img {
+	border-radius: 50%;
+	border-width: 5px;
+	border-style: solid;
+	width: 180px;
+	height: 140px;
 }
+
 /*subtitulos*/
-section article .heroe h2{
-	padding:0px;
-	text-align:right;
-	margin:15px 20px 0px 165px;
-	font-size:1.2em;
+section article .recomienda h2 {
+	padding: 0px;
+	text-align: right;
+	margin: 15px 20px 0px 165px;
+	font-size: 1.2em;
 }
-section article.heroe span.subtit{
-	border-radius:15px 15px 0px 0px;
-	border-style:solid;
-	border-width:2px;
-	color:#f7f7f7;
-	font-weight:bolder;
-	height:30px;
-	line-height:30px;
-	padding:2px 10px;
-	position:absolute; /*lo ubica con relacion al padre*/
-	right:-2px;
-	top:-38px;
-	text-align:center;
+
+section article.recomienda span.subtit {
+	border-radius: 15px 15px 0px 0px;
+	border-style: solid;
+	border-width: 2px;
+	color: #f7f7f7;
+	font-weight: bolder;
+	height: 30px;
+	line-height: 30px;
+	padding: 2px 10px;
+	position: absolute;
+	/*lo ubica con relacion al padre*/
+	right: -2px;
+	top: -38px;
+	text-align: center;
 }
-section article.heroe p{
-	font-size:0.8em;
-	text-align:justify;
-	margin:15px 10px 5px 30px;
+
+section article.recomienda p {
+	font-size: 0.8em;
+	text-align: justify;
+	margin: 15px 10px 5px 30px;
 }
+
 /*div-contiene las lista inferior*/
-section article.heroe div{
-	width:90%;
-	margin:30px 5% 10% 5%;
-	border-width:2px;
-	border-style:solid;
-	position:relative;
-	padding-top:20px;
-	font-size:0.9em;
-	border-radius:15px;
+section article.recomienda div {
+	width: 90%;
+	margin: 30px 5% 10% 5%;
+	border-width: 2px;
+	border-style: solid;
+	position: relative;
+	padding-top: 20px;
+	font-size: 0.9em;
+	border-radius: 15px;
 }
+
 /*Titulo inferior arriba de la lista */
-section article.heroe div span{
-	position:absolute;
-	top:-15px;
-	left:10px;
-	line-height:20px;
-	border-radius:15px;
-	text-decoration:underline;
-	background-color:white;
-	padding:3px 10px;
+section article.recomienda div span {
+	position: absolute;
+	top: -15px;
+	left: 10px;
+	line-height: 20px;
+	border-radius: 15px;
+	text-decoration: underline;
+	background-color: white;
+	padding: 3px 10px;
 }
+
 /*lista inerior*/
-section article.heroe div ul{
-	list-style:none;
-	margin:0px;
-	padding:0px;
+section article.recomienda div ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
 }
-section article.heroe div ul li{
-	font-weight:bolder;
-	vertical-align:middle; /*deja espacio entre lineas*/
-	display:inline-block; /*acomoda las palabras una al lado de otra*/
-	margin:5px 3%;
-	width:26%; /*ayuda que se acomode con columnas*/
+
+section article.recomienda div ul li {
+	font-weight: bolder;
+	vertical-align: middle;
+	/*deja espacio entre lineas*/
+	display: inline-block;
+	/*acomoda las palabras una al lado de otra*/
+	margin: 5px 3%;
+	width: 26%;
+	/*ayuda que se acomode con columnas*/
 }
+
 /*
 ---------------------------
 Temas de Colores para los Articulos
 ---------------------------
 */
 
-	/*-----------------------
+/*-----------------------
 	TEMA MUTANTE
 	------------------------*/
 
-	/*Coloca bordes a dif elementos*/
-section article.mutante, 
-section article.mutante figure img,
-section article.mutante div, 
-section article.mutante span.subtit{
- 	border-color: #B45F04;
+/*Coloca bordes a dif elementos*/
+section article.reco1,
+section article.reco1 figure img,
+section article.reco1 div,
+section article.reco1 span.subtit {
+	border-color: #B45F04;
 }
-	/*color de titulo*/
-section article.mutante h2{
-	color:#154419;
+
+/*color de titulo*/
+section article.reco1 h2 {
+	color: #154419;
 }
-	/*color de fondo*/
-section article.mutante span.subtit,
-section article.mutante div, 
-section article.mutante div span{
+
+/*color de fondo*/
+section article.reco1 span.subtit,
+section article.reco1 div,
+section article.reco1 div span {
 	background-color: #B45F04;
 }
 
-	/*color del parrafo*/
-section article.mutante p{
-	color:#3E7242;
+/*color del parrafo*/
+section article.reco1 p {
+	color: #3E7242;
 }
-	/*fondo del articulo*/
-section article.mutante{
+
+/*fondo del articulo*/
+section article.reco1 {
 	background-color: #F5DA81;
 }
-	/*color de titulo abajo y letras de la lista*/
-section article.mutante div span,
-section article.mutante div ul li{
-	color:#190707;
+
+/*color de titulo abajo y letras de la lista*/
+section article.reco1 div span,
+section article.reco1 div ul li {
+	color: #190707;
 }
+
 /*
 ---------------------------
 Temas de Colores para los Articulos
 ---------------------------
 */
 
-	/*-----------------------
+/*-----------------------
 	TEMA EXPERIMENTO
 	------------------------*/
 
-	/*Coloca bordes a dif elementos*/
-section article.experimento, 
-section article.experimento figure img,
-section article.experimento div, 
-section article.experimento span.subtit{
- 	border-color: #082E08;
+/*Coloca bordes a dif elementos*/
+section article.reco2,
+section article.reco2 figure img,
+section article.reco2 div,
+section article.reco2 span.subtit {
+	border-color: #082E08;
 }
-	/*color de titulo*/
-section article.experimento h2{
-	color:#154419;
+
+/*color de titulo*/
+section article.experimento h2 {
+	color: #154419;
 }
-	/*color de fondo*/
-section article.experimento span.subtit,
-section article.experimento div, 
-section article.experimento div span{
+
+/*color de fondo*/
+section article.reco2 span.subtit,
+section article.reco2 div,
+section article.reco2 div span {
 	background-color: #154419;
 }
 
-	/*color del parrafo*/
-section article.experimento p{
-	color:#3E7242;
+/*color del parrafo*/
+section article.reco2 p {
+	color: #3E7242;
 }
-	/*fondo del articulo*/
-section article.experimento{
+
+/*fondo del articulo*/
+section article.reco2 {
 	background-color: #C0EE90;
 }
-	/*color de titulo abajo y letras de la lista*/
-section article.experimento div span,
-section article.experimento div ul li{
-	color:#F7BE81;
+
+/*color de titulo abajo y letras de la lista*/
+section article.reco2 div span,
+section article.reco2 div ul li {
+	color: #F7BE81;
 }
+
 /*
 ---------------------------
 Temas de Colores para los Articulos
 ---------------------------
 */
 
-	/*-----------------------
+/*-----------------------
 	TEMA ACCIDENTE
 	------------------------*/
 
-	/*Coloca bordes a dif elementos*/
-section article.accidente, 
-section article.accidente figure img,
-section article.accidente div, 
-section article.accidente span.subtit{
- 	border-color: #610B0B;
+/*Coloca bordes a dif elementos*/
+section article.reco3,
+section article.reco3 figure img,
+section article.reco3 div,
+section article.reco3 span.subtit {
+	border-color: #610B0B;
 }
-	/*color de titulo*/
-section article.accidente h2{
-	color:#190707;
+
+/*color de titulo*/
+section article.reco3 h2 {
+	color: #190707;
 }
-	/*color de fondo*/
-section article.accidente span.subtit,
-section article.accidente div, 
-section article.accidente div span{
+
+/*color de fondo*/
+section article.reco3 span.subtit,
+section article.reco3 div,
+section article.reco3 div span {
 	background-color: #610B0B;
 }
 
-	/*color del parrafo*/
-section article.accidente p{
-	color:#190707;
+/*color del parrafo*/
+section article.reco3 p {
+	color: #190707;
 }
-	/*fondo del articulo*/
-section article.accidente{
+
+/*fondo del articulo*/
+section article.reco3 {
 	background-color: #F2F5A9;
 }
-	/*color de titulo abajo y letras de la lista*/
-section article.accidente div span,
-section article.accidente div ul li{
-	color:#F2F2F2;
+
+/*color de titulo abajo y letras de la lista*/
+section article.reco3 div span,
+section article.reco3 div ul li {
+	color: #F2F2F2;
 }
+
 /*
 ---------------------------
 Barra Lateral de Noticias
 ---------------------------
 */
-section div.noticias{
-	/*forma al cuadro de noticias*/	 
+section div.noticias {
+	/*forma al cuadro de noticias*/
 	width: 30%;
 	background-color: #FFFFFF;
-	border:1px solid #000000;
+	border: 1px solid #000000;
 	border-radius: 10px;
 	margin-right: 20px;
 	margin-top: 4px;
 	float: right;
 	padding-bottom: 20px;
-	display: none; /*oculta las noticias en una pantalla pequeña*/
+	display: none;
+	/*oculta las noticias en una pantalla pequeña*/
 }
-	/*titulo superior*/
-section div.noticias h2{
+
+/*titulo superior*/
+section div.noticias h2 {
 	text-align: center;
 }
-section div.noticias h3{
+
+section div.noticias h3 {
 	margin-left: 85px;
 }
 
-	/*contenido interno*/
-section div.noticias article.post{
+/*contenido interno*/
+section div.noticias article.post {
 	width: 95%;
 	margin-left: 2%;
-	margin-top: 25px; 
+	margin-top: 25px;
 	border-top: 2px solid #440A4E;
 }
-	/*decora imagen*/
-section div.noticias figure{
+
+/*decora imagen*/
+section div.noticias figure {
 	float: left;
 	margin-top: 10px;
 }
 
-section div.noticias figure img{
+section div.noticias figure img {
 	width: 70px;
 	height: 100px;
 }
-	/*parrafo*/
-section div.noticias p{
+
+/*parrafo*/
+section div.noticias p {
 	font-style: italic;
 	font-size: 0.8em;
 	text-align: justify;
-	margin:50px 3% 20px 5%;
+	margin: 50px 3% 20px 5%;
 }
 
-section div.noticias video{
+section div.noticias video {
 	width: 90%;
 	margin: 0px 5%;
 }
+
 /*
 ---------------------------
 Slide de Imagenes
 ---------------------------
 */
-	/*forma el contenedor principal y el subcontenedor*/
-div#slideContenedor{
+/*forma el contenedor principal y el subcontenedor*/
+div#slideContenedor {
 	position: relative;
 	width: 100%;
 	display: none;
-	border:1px solid transparent;
+	border: 1px solid transparent;
 }
-div#slideContenedor #slider{
+
+div#slideContenedor #slider {
 	border-radius: 10px;
-	border:2px solid #8A0868;
-	margin:0 auto;
+	border: 2px solid #8A0868;
+	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 50px;
 	min-height: 300px;
 	width: 55%;
-    height: 500px;
+	height: 500px;
 	position: relative;
-	overflow: hidden; /*oculta detalles fuera de las esquinas*/
+	overflow: hidden;
+	/*oculta detalles fuera de las esquinas*/
 	padding: 0px;
 }
-	/*decorar las imagenes*/
-div#slideContenedor #slider div.elemento{
+
+/*decorar las imagenes*/
+div#slideContenedor #slider div.elemento {
 	position: absolute;
 	left: 0px;
-	top:0px;
+	top: 0px;
 	width: 100%;
 	height: 100%;
 }
 
-div#slideContenedor #slider img{
-	border:0px;
+div#slideContenedor #slider img {
+	border: 0px;
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
 	height: 100%;
 }
-	/*decorar la frase (texto), y la ubica esquina sup-der*/
-div#slideContenedor #slider p.frase{
+
+/*decorar la frase (texto), y la ubica esquina sup-der*/
+div#slideContenedor #slider p.frase {
 	display: block;
 	font-size: 1.4em;
 	font-weight: bolder;
 	line-height: 25px;
-	color:#DF7401;
+	color: #DF7401;
 	width: 29%;
-	position:absolute;
-	right:1%;
-	top:5%;
-	text-shadow:2px 2px 3px black,
-				-2px -2px 3px black;
+	position: absolute;
+	right: 1%;
+	top: 5%;
+	text-shadow: 2px 2px 3px black,
+		-2px -2px 3px black;
 }
+
 /* 
 ----------------
 Responsive
 ---------------
-*/ 
+*/
 
 /*cuando el minimo sea de 480 la pantalla cambia*/
-@media screen and (min-width:480px){
-	header nav ul li{
+@media screen and (min-width:480px) {
+	header nav ul li {
 		width: 22%;
 		/*background-color:blue;*/
 	}
 }
-@media screen and (min-width:767px){
-	header nav ul li{
+
+@media screen and (min-width:767px) {
+	header nav ul li {
 		width: 10%;
 		/*background-color:green;*/
 	}
-	section article.heroe{
-		width:40%;
-		margin:50px 3% 20px 6%;
+
+	section article.heroe {
+		width: 40%;
+		margin: 50px 3% 20px 6%;
 	}
-	div#slideContenedor{
+
+	div#slideContenedor {
 		/*despliega el div*/
-		display:inline;
+		display: inline;
 	}
 }
-@media screen and (min-width:950px){
-	header nav ul li{
+
+@media screen and (min-width:950px) {
+	header nav ul li {
 		width: 8%;
 		/*background-color:red;*/
 	}
-	section article.heroe{
-		width:26%;
-		margin:50px 1% 20px 5%;
+
+	section article.recomienda {
+		width: 26%;
+		margin: 50px 1% 20px 5%;
 	}
-	section div.noticias{
+
+	section div.noticias {
 		/*despliega el div de noticias*/
-		display:inline;
+		display: inline;
 	}
-	div#slideContenedor #slider{
+
+	div#slideContenedor #slider {
 		min-height: 400px
 	}
 }
