@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <title> SuperHeroes </title>
+    <meta charset="utf-8">
+    <!--ayuda a visualizar en dispositivos moviles, desactiva el zoom, y permite al usuario moverse solo de arriba a abajo, width=device-width ancho sea igual al ancho del dispositivo, inicio y maximo sea igual a 1 para no usar zoom-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--fuente de Googlefonts-->
+    <link href="http://fonts.googleapis.com/css?family=indie+flower" rel="stylesheet" type="text/css">
+
+    <!--ayuda a que las etiquetas modernas sean compartible en todos los navegadores http://modernizr.com/download/-->
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="img/header2.jpg" alt="Recomendador Libros">
+        </figure>
+        <h1>Recomendador Libros</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Recomendador de libro</a></li>
+                <li><a href="#">Sugerir Libros</a></li>
+                <li><a href="#">Buscar Libro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Slide de Imagenes-->
+    <div id="slideContenedor">
+        <div id="slider">
+            <div class="elemento">
+                <a href="#"><img src="img/slider1.jpeg" alt=""> </a>
+                <p class="frase">"Cien años de soledad" Gabriel García Márquez</p>
+            </div>
+            <div class="elemento">
+                <a href="#"><img src="img/slider2.jpeg" alt=""> </a>
+                <p class="frase">"1984" George Orwell</p>
+            </div>
+            <div class="elemento">
+                <a href="#"><img src="img/slider3.jpeg" alt=""> </a>
+                <p class="frase">"Orgullo y prejuicio" Jane Austen</p>
+            </div>
+            <div class="elemento">
+                <a href="#"><img src="img/slider4.jpeg" alt=""> </a>
+                <p class="frase">"El hombre en busca de sentido" Viktor Frankl</p>
+            </div>
+            <div class="elemento">
+                <a href="#"><img src="img/slider5.jpeg" alt=""> </a>
+                <p class="frase">"El temor de un hombre sabio" Patrick Rothfuss</p>
+            </div>
+            <div class="elemento">
+                <a href="#"><img src="img/slider6.jpeg" alt=""> </a>
+                <p class="frase">"Sapiens: De animales a dioses" Yuval Noah Harari</p>
+            </div>
+            <div class="elemento">
+                <a href="#"><img src="img/slider7.jpeg" alt=""> </a>
+                <p class="frase">"El Principito" Antoine de Saint-Exupéry</p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <!--banner lateral noticias-->
+        <div class="noticias">
+            <h2>Ultimas Noticias</h2>
+            <article class="post">
+                <figure>
+                    <img src="img/noticia01.jpg" alt="Capitan America">
+                </figure>
+                <h3>Capitan America: <br>Civil War</h3>
+                <p>"Capitán América: Civil War", de Marvel, empieza donde lo dejó "Vengadores: La Era de Ultrón" ya que
+                    Steve Rogers lidera el nuevo equipo de los Vengadores en su incesante tarea de proteger a la
+                    humanidad. Pero, después de que otro incidente internacional en el que se ven envueltos los
+                    Vengadores produzca daños colaterales, la presión política obliga a poner en marcha un sistema para
+                    depurar responsabilidades y a crear un organismo rector que determine cuándo hay que recurrir a los
+                    servicios del equipo. El nuevo statu quo divide a los Vengadores en dos bandos, uno liderado por
+                    Steve Rogers y su deseo de mantener la libertad de actuación de los Vengadores a la hora de defender
+                    a la humanidad sin interferencias, y otro liderado por Tony Stark y su sorprendente decisión de
+                    apoyar los planes y organismos del Gobierno, mientras intentan proteger al mundo de un nuevo malvado
+                </p>
+                <video controls>
+                    <source src="media/CapitanAmericaCivilWar.mp4" type="video/mp4" ;
+                        codecs="avc.h264,avc.42E01E;mp4a.40.2">
+                    </source>
+                </video>
+            </article>
+            <article class="post">
+                <figure>
+                    <img src="img/noticia02.jpg" alt="AntiHeroe">
+                </figure>
+                <h3>Deadpool - Todo un AntiHeroe</h3>
+                <p>En Deadpool, después de ser sometido a un experimento que deja a Wade Wilson con nuevas habilidades y
+                    con un retorcido sentido del humor, Wilson persigue al hombre que casi destrozó su vida.</p>
+            </article>
+        </div>
+        <!--articulo-->
+        <article class="heroe mutante">
+            <figure><img src="img/odisea.jpg" alt="Odisea"></figure>
+            <span class="subtit">La odisea</span>
+            <h2>Homero</h2>
+            <p>La Odisea es un poema épico griego compuesto por 24 cantos, atribuido al poeta griego Homero. Se cree que
+                fue compuesta en el siglo VIII a. C. en los asentamientos que tenía Grecia en la costa oeste del Asia
+                Menor. Según otros autores, la Odisea se completa en el siglo VII.</p>
+            <div>
+                <span><strong>Genero Literario</strong></span>
+                <ul>
+                    <li>Epopeya</li>
+                    <li>Epico</li>
+
+                </ul>
+            </div>
+        </article>
+        <article class="heroe accidente"><!--hay dos clases-->
+            <figure><img src="img/edipo.jpeg" alt="Edipo"></figure>
+            <span class="subtit">Edipo</span>
+            <h2>Sofocles</h2>
+            <p>Edipo era un rey mítico de Tebas, hijo de Layo y Yocasta que, sin saberlo, mató a su propio padre y
+                desposó a su madre. Epiménides dice que Layo desposó a Euriclea, la hija de Ecfante, y que de esta unión
+                nació Edipo.</p>
+            <div>
+                <span><strong>Genero Literario</strong></span>
+                <ul>
+                    <li>Tragedia</li>
+                </ul>
+            </div>
+        </article>
+        <article class="heroe experimento">
+            <figure><img src="img/Donquijote.jpg" alt="Don Quijote"></figure>
+            <span class="subtit">Don Quijote</span>
+            <h2>Miguel de Cervantes</h2>
+            <p>Don Quijote de la Mancha es una novela moderna y la primera novela polifónica escrita por el español
+                Miguel de Cervantes Saavedra. Publicada su primera parte con el título de El ingenioso hidalgo don
+                Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de
+                las principales de la literatura universal. En 1615 apareció su continuación con el título de Segunda
+                parte del ingenioso caballero don Quijote de la Mancha. El Quijote de 1605 se publicó dividido en cuatro
+                partes; pero al aparecer el Quijote de 1615 en calidad de Segunda parte de la obra, quedó revocada de
+                hecho la partición en cuatro secciones del volumen publicado diez años antes por Cervantes.2.
+            </p>
+            <div>
+                <span><strong>Genero Literario</strong></span>
+                <ul>
+                    <li>Novela</li>
+                    <li>Satira</li>
+                    <li>Parodia</li>
+                    <li>Farsa</li>
+                    <li>Ficción</li>
+                </ul>
+            </div>
+        </article>
+        <article class="heroe accidente">
+            <figure><img src="img/daredevil.jpg" alt="daredevil"></figure>
+            <span class="subtit">Daredevil</span>
+            <h2>Michael Murdock</h2>
+            <p>Un accidente anormal causó que Daredevil se hiciera ciego, pero aumentaron todos sus otros sentidos a un
+                grado súper-humano. Él puede escuchar sonidos a cuatro bloques de distancia, usando el sonido como un
+                radar para "ver" y realizar movimientos de artes marciales.
+            </p>
+            <div>
+                <span><strong>Fortalezas</strong></span>
+                <ul>
+                    <li>Fuerza</li>
+                    <li>Resistencia</li>
+                    <li>Volar</li>
+                    <li>Golpe</li>
+                    <li>Puno</li>
+                    <li>Sanacion</li>
+                </ul>
+            </div>
+        </article>
+        <article class="heroe accidente">
+            <figure><img src="img/spiderman.jpg" alt="spiderman"></figure>
+            <span class="subtit">Spiderman</span>
+            <h2>Peter Parker</h2>
+            <p>Spider-Man (El hombre araña) puede emitir telarañas desde sus muñecas o a través de cartuchos,
+                dependiendo de la versión de la historieta en que aparece. Tiene un "Spidey-Sense (Sentido araña)" que
+                puede detectar movimiento y peligro acercándose. Con pequeños agarres en sus dedos puede escalar paredes
+                y otras estructuras. Spider-Man usa su habilidad de araña para volar de un edificio a otro, y su cuerpo
+                puede soportar dolor extremo.
+            </p>
+            <div>
+                <span><strong>Fortalezas</strong></span>
+                <ul>
+                    <li>Fuerza</li>
+                    <li>Resistencia</li>
+                    <li>Volar</li>
+                    <li>Golpe</li>
+                    <li>Puno</li>
+                    <li>Sanacion</li>
+                </ul>
+            </div>
+        </article>
+        <article class="heroe experimento">
+            <figure><img src="img/4fantasticos.jpg" alt="4fantasticos"></figure>
+            <span class="subtit">4 fantasticos</span>
+            <h2>Equipo Invencible</h2>
+            <p>Los cuatro fantásticos, el primer equipo de superhéroes de Marvel, son cuatro astronautas que fueron
+                transformados cuando un accidente en el espacio los expuso a los rayos gamma. El Sr. Fantástico puede
+                estirar su cuerpo en direcciones múltiples y hacia el exterior como plastilina. El cuerpo de The Thing
+                (La cosa) se convierte en una colección gigante de roca lo que le otorga súper fuerza. La Antorcha
+                Humana puede crear y manipular fuego. La Mujer Invisible puede hacerse invisible a simple vista. Cuando
+                ella toca a otro humano u objeto, puede transferir sus poderes por el tiempo que estén en contacto.
+            </p>
+            <div>
+                <span><strong>Miembros</strong></span>
+                <ul>
+                    <li>Antorcha</li>
+                    <li>Mole</li>
+                    <li>Mujer Invencible</li>
+                    <li>Elastico</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <span>Proyecto Final - Grupo 5</span>
+    </footer>
+    <!--Codigo de JavaScript para el Contenedor de Imagenes-->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js' type='text/javascript'></script>
+
+    <script type="text/javascript">//<![CDATA[
+        $(function () {
+            $('#slider div:gt(0)').hide();
+            setInterval(function () {
+                $('#slider div:first-child').fadeOut(0)
+                    .next('div').fadeIn(1000)
+                    .end().appendTo('#slider');
+            }, 3000);
+        });
+        //]]>
+    </script>
+    <!--FIN del script de JavaScript-->
+</body>
+
+</html>

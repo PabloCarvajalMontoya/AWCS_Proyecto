@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recomendar Libro</title>
+</head>
+<body>
+    <header>
+        <h1>Recomendar Libro</h1>
+    </header>
+
+    <main>
+        <form id="recomendar-form">
+            <label for="genero">Género Literario:</label>
+            <select id="genero" name="genero">
+                <option value="ficcion">Ficción</option>
+                <option value="no-ficcion">No Ficción</option>
+                <option value="fantasia">Fantasía</option>
+                <option value="misterio">Misterio</option>
+            </select>
+            <button type="submit">Recomendar</button>
+        </form>
+
+        <div id="resultado-recomendacion">
+            <!-- Aquí se mostrarán las recomendaciones -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
