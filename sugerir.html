@@ -26,8 +26,10 @@
             </ul>
         </nav>
     </header>
+
+
     <!--Slide de Imagenes-->
-    <div id="slideContenedor">
+    <!--<div id="slideContenedor">
         <div id="slider">
             <div class="elemento">
                 <a href="#"><img src="img/slider1.jpeg" alt=""> </a>
@@ -58,7 +60,9 @@
                 <p class="frase">"El Principito" Antoine de Saint-Exupéry</p>
             </div>
         </div>
-    </div>
+    </div>  -->
+ 
+    
     <section>
         <!--banner lateral noticias-->
         <div class="noticias">
@@ -107,118 +111,36 @@
                     cambiará su vida por completo!.</p>
             </article>
         </div>
-        <!--articulo-->
-        <article class="recomienda reco1">
-            <figure><img src="img/BAJO-UN-CIELO-BANCO.jpg" alt="BAJO-UN-CIELO-BANCO"></figure>
-            <span class="subtit">Bajo un cielo Blanco</span>
-            <h2>Elizabeth Kolbert</h2>
-            <p>Elizabeth Kolbert reflexiona sobre el mundo que hemos creado y los cambios que hemos ocasionado
-                en nuestro planeta. En su recorrido habla con especialistas biólogos, físicos, ingenieros
-                de distintas partes del mundo que, con distintos proyectos, tratan de hacer un mundo más
-                sostenible.</p>
-            <div>
-                <span><strong>Genero Literario</strong></span>
-                <ul>
-                    <li>Ensayo</li>
-                </ul>
-            </div>
-        </article>
-        <article class="recomienda reco3"><!--hay dos clases-->
-            <figure><img src="img/CUENTO-DE-HADAS-P.png" alt="CUENTO-DE-HADAS-P"></figure>
-            <span class="subtit">Cuento de hadas</span>
-            <h2>Stephen King</h2>
-            <p>El libro se centra en Charlie, un muchacho que ha aprendido a valerse por sí mismo desde
-                muy pequeño. Su vida dio un giro cuando su madre fue atropellada y su padre empezó a tomar
-                sin control.
 
-                El joven tiene como amigos a una perra llamada Radar y a un enigmático ermitaño. Un día,
-                cuando el eremita fallece, le deja una cinta de casete donde le cuenta su gran secreto:
-                dentro de su guarida hay un portal que conduce a otro mundo.</p>
+        
+        <form action="/submit" method="post" enctype="multipart/form-data">
             <div>
-                <span><strong>Genero Literario</strong></span>
-                <ul>
-                    <li>Novela</li>
-                </ul>
+                <label for="nombre">Nombre del libro:</label>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
-        </article>
-        <article class="recomienda reco2">
-            <figure><img src="img/Donquijote.jpg" alt="Don Quijote"></figure>
-            <span class="subtit">Don Quijote</span>
-            <h2>Miguel de Cervantes</h2>
-            <p>Don Quijote de la Mancha es una novela moderna y la primera novela polifónica escrita por el español
-                Miguel de Cervantes Saavedra. Publicada su primera parte con el título de El ingenioso hidalgo don
-                Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de
-                las principales de la literatura universal. En 1615 apareció su continuación con el título de Segunda
-                parte del ingenioso caballero don Quijote de la Mancha. El Quijote de 1605 se publicó dividido en cuatro
-                partes; pero al aparecer el Quijote de 1615 en calidad de Segunda parte de la obra, quedó revocada de
-                hecho la partición en cuatro secciones del volumen publicado diez años antes por Cervantes.2.
-            </p>
             <div>
-                <span><strong>Genero Literario</strong></span>
-                <ul>
-                    <li>Novela</li>
-                    <li>Satira</li>
-                    <li>Parodia</li>
-                    <li>Farsa</li>
-                    <li>Ficción</li>
-                </ul>
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required>
             </div>
-        </article>
-        <article class="recomienda reco3">
-            <figure><img src="img/solo-humo.jpg" alt="solo-humo"></figure>
-            <span class="subtit">Sólo humo</span>
-            <h2>Juan José Millas</h2>
-            <p>Cuando Carlos cumple 18 años recibe la noticia de que su padre, a quien nunca conoció, ha
-                muerto. Lo más sorpresivo es que recibe en herencia su casa y allí descubrirá un mundo que
-                lo transformará por completo.
-            </p>
             <div>
-                <span><strong>Genero Literario</strong></span>
-                <ul>
-                    <li>Novela</li>
-                </ul>
+                <label for="sinopsis">Sinopsis:</label>
+                <textarea id="sinopsis" name="sinopsis" required></textarea>
             </div>
-        </article>
-        <article class="recomienda reco3">
-            <figure><img src="img/EL ANCHO MUNDO 2.jpg" alt="EL ANCHO"></figure>
-            <span class="subtit">El ancho mundo</span>
-            <h2>Pierre Lemaitre</h2>
-            <p>Esta novela se centra en los miembros de la familia Pelletier, un clan que ha prosperado
-                gracias a la fábrica de jabones en Beirut. Con el paso del tiempo, los hijos tienen otros
-                planes para su futuro, lejos del negocio familiar.
-
-                Jean, el primogénito, se muda a París para vivir del comercio de telas. François busca
-                abrirse un hueco como periodista también en la misma ciudad. Por su parte, Étienne se
-                marcha a Saigón para unirse con su enamorado, pero termina involucrado en una red de tráfico
-                de capitales. Hélène, la pequeña, busca desesperadamente encontrar su lugar en el mundo y
-                perder de vista a sus padres.
-            </p>
             <div>
-                <span><strong>Genero Literario</strong></span>
-                <ul>
-                    <li>Novela</li>
-                </ul>
+                <label for="genero">Género:</label>
+                <input type="text" id="genero" name="genero" required>
             </div>
-        </article>
-        <article class="recomienda reco2">
-            <figure><img src="img/De la tierra a la luna.JPG" alt="de la tierra a luna"></figure>
-            <span class="subtit">De la Tierra a la Luna</span>
-            <h2>Julio Verne</h2>
-            <p>En el Gun Club de Baltimore, tres científicos aficionados preparan el mayor
-                salto intentado nunca por los hombres, sirviendose de un proyectil, que contiene
-                una cabina para los decimonónicos astronautas, y un gigantesco cañón para dispararlo más
-                allá de la atmósfera.
             <div>
-                <span><strong>Genero Literario</strong></span>
-                <ul>
-                    <li>Ciencia ficción </li>
-                    <li>Ficción de aventuras</li>
-                    <li>Novela científica</li>
-                </ul>
-
+                <label for="imagen">Imagen del libro:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
             </div>
-        </article>
+            <div>
+                <button type="submit">Agregar</button>
+            </div>
+        </form>
+        
     </section>
+
     <footer>
         <span>Proyecto Final - Grupo 5</span>
     </footer>
