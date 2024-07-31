@@ -12,6 +12,32 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 
+<?php
+
+// Verificar la conexión
+include 'config.php';
+
+// Función para generar opciones en el menú desplegable
+function getOptions($conn, $column) { // recibe el parametro de la conexion y el nombre de la columna de la tabla
+    $sql = "SELECT DISTINCT $column FROM Libros"; //Hace un select de la columna
+    $result = $conn->query($sql);//Guarda el resultado de la consulta
+    $options = "";
+    while ($row = $result->fetch_assoc()) { //Recorre cada registro
+        $options .= "<option value='" . htmlspecialchars($row[$column]) . "'>" . htmlspecialchars($row[$column]) . "</option>";
+    }//Crea una opcion desplegable segun lo que encuentre en la base de datos
+    return $options;
+}
+
+// Obtener opciones para los selects
+$nombre_libros_options = getOptions($conn, 'nombre_libro'); // Guarda en la variable $nombre_libros_options, los nombres de los libros existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$autores_options = getOptions($conn, 'autor'); // Guarda en la variable $autores_options, los nombres de los autores existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$generos_options = getOptions($conn, 'genero');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+
+// Cerrar la conexión
+$conn->close();
+?>
+
+
 <body>
     <header>
         <figure>
@@ -20,49 +46,16 @@
         <h1>Recomendador Libros</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="recomendador.html">Recomendador de libros</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="recomendador.php">Recomendador de libros</a></li>
                 <li><a href="sugerir.html">Sugerir Libros</a></li>
             </ul>
         </nav>
     </header>
 
 
-    <!--Slide de Imagenes-->
-    <!--<div id="slideContenedor">
-        <div id="slider">
-            <div class="elemento">
-                <a href="#"><img src="img/slider1.jpeg" alt=""> </a>
-                <p class="frase">"Cien años de soledad" Gabriel García Márquez</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider2.jpeg" alt=""> </a>
-                <p class="frase">"1984" George Orwell</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider3.jpeg" alt=""> </a>
-                <p class="frase">"Orgullo y prejuicio" Jane Austen</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider4.jpeg" alt=""> </a>
-                <p class="frase">"El hombre en busca de sentido" Viktor Frankl</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider5.jpeg" alt=""> </a>
-                <p class="frase">"El temor de un hombre sabio" Patrick Rothfuss</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider6.jpeg" alt=""> </a>
-                <p class="frase">"Sapiens: De animales a dioses" Yuval Noah Harari</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider7.jpeg" alt=""> </a>
-                <p class="frase">"El Principito" Antoine de Saint-Exupéry</p>
-            </div>
-        </div>
-    </div>  -->
  
-    
+
     <section>
         <!--banner lateral noticias-->
         <div class="noticias">
@@ -115,40 +108,31 @@
         
         <!--articulo-->
         <article class="recomienda reco1">
-            <form action="procesar_recomendacion.php" method="POST">
-                <label for="nombre_libro">Nombre del libro:</label>
-                <select name="nombre_libro" id="nombre_libro">
-                    <option value="">Seleccione un libro</option>
-                    <option value="Libro1">Libro 1</option>
-                    <option value="Libro2">Libro 2</option>
-                    <option value="Libro3">Libro 3</option>
-                    <!-- Más opciones acá -->
-                </select>
-                <br><br>
-        
-                <label for="autor">Autor:</label>
-                <select name="autor" id="autor">
-                    <option value="">Seleccione un autor</option>
-                    <option value="Autor1">Autor 1</option>
-                    <option value="Autor2">Autor 2</option>
-                    <option value="Autor3">Autor 3</option>
-                    <!-- ás opciones acá -->
-                </select>
-                <br><br>
-        
-                <label for="genero">Género:</label>
-                <select name="genero" id="genero">
-                    <option value="">Seleccione un género</option>
-                    <option value="Gen1">Género 1</option>
-                    <option value="Gen2">Género 2</option>
-                    <option value="Gen3">Género 3</option>
-                    <!-- ás opciones acá -->
-                </select>
-                <br><br>
-        
-                <input type="submit" value="Buscar recomendación">
-            </form>
-        </article>
+        <form action="procesar_recomendacion.php" method="POST"> <!--Los datos se enviarán a procesar_recomendacion.php por medio del metodo POST-->
+            <label for="nombre_libro">Nombre del libro:</label>
+            <select name="nombre_libro" id="nombre_libro">
+                <option value="">Ver todos</option> <!--"Ver todos" tiene un valor vacío entonces no seleccionara un nombre en especifico->
+                <?php echo $nombre_libros_options; ?> //Esta variable me guarda los nombres de los libros que tiene la base de datos para mostrarla en el menú
+            </select>
+            <br><br>
+
+            <label for="autor">Autor:</label>
+            <select name="autor" id="autor">
+                <option value="">Ver todos</option>
+                <?php echo $autores_options; ?>
+            </select>
+            <br><br>
+
+            <label for="genero">Género:</label>
+            <select name="genero" id="genero">
+                <option value="">Ver todos</option>
+                <?php echo $generos_options; ?>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Buscar recomendación">
+        </form>
+    </article>
         
     </section>
 
@@ -170,6 +154,9 @@
         //]]>
     </script>
     <!--FIN del script de JavaScript-->
+    
 </body>
+
+
 
 </html>

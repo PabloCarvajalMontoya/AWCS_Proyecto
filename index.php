@@ -20,8 +20,8 @@
         <h1>Recomendador Libros</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="recomendador.html">Recomendador de libros</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="recomendador.php">Recomendador de libros</a></li>
                 <li><a href="sugerir.html">Sugerir Libros</a></li>
             </ul>
         </nav>

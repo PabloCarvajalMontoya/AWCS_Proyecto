@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html lang="es">
 
@@ -26,44 +27,37 @@
             </ul>
         </nav>
     </header>
-
-
-    <!--Slide de Imagenes-->
-    <!--<div id="slideContenedor">
-        <div id="slider">
-            <div class="elemento">
-                <a href="#"><img src="img/slider1.jpeg" alt=""> </a>
-                <p class="frase">"Cien años de soledad" Gabriel García Márquez</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider2.jpeg" alt=""> </a>
-                <p class="frase">"1984" George Orwell</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider3.jpeg" alt=""> </a>
-                <p class="frase">"Orgullo y prejuicio" Jane Austen</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider4.jpeg" alt=""> </a>
-                <p class="frase">"El hombre en busca de sentido" Viktor Frankl</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider5.jpeg" alt=""> </a>
-                <p class="frase">"El temor de un hombre sabio" Patrick Rothfuss</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider6.jpeg" alt=""> </a>
-                <p class="frase">"Sapiens: De animales a dioses" Yuval Noah Harari</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider7.jpeg" alt=""> </a>
-                <p class="frase">"El Principito" Antoine de Saint-Exupéry</p>
-            </div>
-        </div>
-    </div>  -->
- 
     
-    <section>
+    <?php
+include 'config.php';
+
+
+// Obtener los parámetros del formulario con el metodo POST
+$nombre_libro = $_POST['nombre_libro'];
+$autor = $_POST['autor'];
+$genero = $_POST['genero'];
+
+// Consulta SQL para obtener la información del libro
+$sql = "SELECT * FROM Libros WHERE nombre_libro LIKE ? AND autor LIKE ? AND genero LIKE ?"; //Realiza la consulta para que los 3 valores escogidos en el menú coincidan con lo que tenemos en la BD
+$stmt = $conn->prepare($sql); //Se prepara la consulta 
+$like_nombre_libro = '%' . $nombre_libro . '%'; //Guarda en una variable cualquier coincidencia que tenga el nombre del libro
+$like_autor = '%' . $autor . '%'; //Guarda en una variable cualquier coincidencia que tenga el nombre del autor
+$like_genero = '%' . $genero . '%'; //Guarda en una variable cualquier coincidencia que tenga el nombre del genero
+$stmt->bind_param("sss", $like_nombre_libro, $like_autor, $like_genero); // Se asocian los valores para los marcadores de la consulta . Los marcadores son los signos "?" que se muestran en el select
+$stmt->execute();//Se ejecuta la consulta 
+$result = $stmt->get_result(); //Se obtiene el resultado
+
+// Mostrar los resultados
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Recomendación</title>
+</head>
+
+<section>
         <!--banner lateral noticias-->
         <div class="noticias">
             <h2>Recomendaciones de la semana</h2>
@@ -111,55 +105,27 @@
                     cambiará su vida por completo!.</p>
             </article>
         </div>
+<body>
+    <h1>Resultados de Recomendación</h1>
+    <?php
+    if ($result->num_rows > 0) { //Validar si existen registros con el resultado obtenido en la consulta
+        while ($row = $result->fetch_assoc()) { //Recorre cada fila que encontró en el resultado
+            //Se imprime la información. htmlspecialchars lo que hace es evitar problemas con caracteres especiales
+            echo "<h2>Detalles del libro:</h2>";
+            echo "<p><strong>Nombre:</strong> " . htmlspecialchars($row["nombre_libro"]) . "</p>";
+            echo "<p><strong>Autor:</strong> " . htmlspecialchars($row["autor"]) . "</p>";
+            echo "<p><strong>Género:</strong> " . htmlspecialchars($row["genero"]) . "</p>";
+            echo "<p><strong>Sinopsis:</strong> " . htmlspecialchars($row["sinopsis"]) . "</p>";
+            echo "<p><strong></strong> <img src='" . htmlspecialchars($row["imagen"]) . "' alt='" . htmlspecialchars($row["nombre_libro"]) . "'></p>";
+        }
+    } else {
+        echo "<p>No se encontraron resultados para los criterios seleccionados.</p>";
+    }
 
-        
-        <!--articulo-->
-        <form action="/submit" method="post" enctype="multipart/form-data">
-            <div>
-                <label for="nombre">Nombre del libro:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div>
-                <label for="autor">Autor:</label>
-                <input type="text" id="autor" name="autor" required>
-            </div>
-            <div>
-                <label for="sinopsis">Sinopsis:</label>
-                <textarea id="sinopsis" name="sinopsis" required></textarea>
-            </div>
-            <div>
-                <label for="genero">Género:</label>
-                <input type="text" id="genero" name="genero" required>
-            </div>
-            <div>
-                <label for="imagen">Imagen del libro:</label>
-                <input type="file" id="imagen" name="imagen" accept="image/*" required>
-            </div>
-            <div>
-                <button type="submit">Agregar</button>
-            </div>
-        </form>
-        
-    </section>
-
-    <footer>
-        <span>Proyecto Final - Grupo 5</span>
-    </footer>
-    <!--Codigo de JavaScript para el Contenedor de Imagenes-->
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js' type='text/javascript'></script>
-
-    <script type="text/javascript">//<![CDATA[
-        $(function () {
-            $('#slider div:gt(0)').hide();
-            setInterval(function () {
-                $('#slider div:first-child').fadeOut(0)
-                    .next('div').fadeIn(1000)
-                    .end().appendTo('#slider');
-            }, 3000);
-        });
-        //]]>
-    </script>
-    <!--FIN del script de JavaScript-->
+    // Cerrar la conexión
+    $stmt->close();
+    $conn->close();
+    ?>
 </body>
 
 </html>
