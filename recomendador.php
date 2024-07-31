@@ -111,8 +111,8 @@ $conn->close();
         <form action="procesar_recomendacion.php" method="POST"> <!--Los datos se enviarán a procesar_recomendacion.php por medio del metodo POST-->
             <label for="nombre_libro">Nombre del libro:</label>
             <select name="nombre_libro" id="nombre_libro">
-                <option value="">Ver todos</option> <!--"Ver todos" tiene un valor vacío entonces no seleccionara un nombre en especifico->
-                <?php echo $nombre_libros_options; ?> //Esta variable me guarda los nombres de los libros que tiene la base de datos para mostrarla en el menú
+                <option value="">Ver todos</option> <!--"Ver todos" tiene un valor vacío entonces no seleccionara un nombre en especifico-->
+                <?php echo $nombre_libros_options; ?> <!--Esta variable me guarda los nombres de los libros que tiene la base de datos para mostrarla en el menú-->
             </select>
             <br><br>
 
