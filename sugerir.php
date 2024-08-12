@@ -22,7 +22,7 @@
             <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="recomendador.php">Recomendador de libros</a></li>
-                <li><a href="sugerir.html">Sugerir Libros</a></li>
+                <li><a href="sugerir.php">Sugerir Libros</a></li>
             </ul>
         </nav>
     </header>
@@ -61,8 +61,8 @@
             </div>
         </div>
     </div>  -->
- 
-    
+
+
     <section>
         <!--banner lateral noticias-->
         <div class="noticias">
@@ -111,35 +111,71 @@
                     cambiará su vida por completo!.</p>
             </article>
         </div>
+        <div class="contenedor">
+            <h1>Sugerir un Libro</h1>
+            <form action="procesar_sugerencia.php" method="post">
+                <label for="nombre_libro">Nombre del libro:</label>
+                <input type="text" id="nombre_libro" name="nombre_libro" required>
 
-        
-        <!--articulo-->
-        <form action="/submit" method="post" enctype="multipart/form-data">
-            <div>
-                <label for="nombre">Nombre del libro:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div>
-                <label for="autor">Autor:</label>
-                <input type="text" id="autor" name="autor" required>
-            </div>
-            <div>
-                <label for="sinopsis">Sinopsis:</label>
-                <textarea id="sinopsis" name="sinopsis" required></textarea>
-            </div>
-            <div>
-                <label for="genero">Género:</label>
-                <input type="text" id="genero" name="genero" required>
-            </div>
-            <div>
-                <label for="imagen">Imagen del libro:</label>
-                <input type="file" id="imagen" name="imagen" accept="image/*" required>
-            </div>
-            <div>
-                <button type="submit">Agregar</button>
-            </div>
-        </form>
-        
+                <label for="autor_libro">Autor del libro:</label>
+                <input type="text" id="autor_libro" name="autor_libro" required>
+
+                <label for="descripcion_libro">Breve descripción:</label>
+                <textarea id="descripcion_libro" name="descripcion_libro" required></textarea>
+
+                <label for="genero_libro">Género literario:</label>
+                <select id="genero_libro" name="genero_libro" required>
+                    <option value="ficcion">Ficción</option>
+                    <option value="no_ficcion">No ficción</option>
+                    <option value="fantasia">Fantasía</option>
+                    <option value="ciencia_ficcion">Ciencia ficción</option>
+                    <option value="biografia">Biografía</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="anio_publicacion">Año de publicación:</label>
+                <input type="number" id="anio_publicacion" name="anio_publicacion" required>
+
+                <label for="idioma_libro">Idioma:</label>
+                <select id="idioma_libro" name="idioma_libro" required>
+                    <option value="espanol">Español</option>
+                    <option value="ingles">Inglés</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="editorial_libro">Editorial:</label>
+                <input type="text" id="editorial_libro" name="editorial_libro">
+
+                <label for="recomendacion">¿Por qué recomiendas este libro?</label>
+                <textarea id="recomendacion" name="recomendacion"></textarea>
+
+                <label for="nombre_usuario">Tu nombre (opcional):</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario">
+
+                <label for="email_usuario">Tu correo electrónico (opcional):</label>
+                <input type="email" id="email_usuario" name="email_usuario">
+
+                <input type="submit" value="Enviar sugerencia">
+            </form>
+        </div>
+        <div class="contenedor2">
+            <!-- Párrafos adicionales -->
+            <h2>Sobre Nuestro Recomendador de Libros</h2>
+            <p>Nuestro recomendador de libros es una herramienta creada por un grupo de apasionados lectores con el objetivo de ayudar a
+            otros a encontrar nuevas lecturas. Creemos que la literatura es una puerta abierta a innumerables mundos y queremos compartir
+            esa experiencia con todos. Desde novelas de ficción que te transportan a universos desconocidos, hasta ensayos que te hacen
+            reflexionar sobre la condición humana, en nuestro sitio puedes encontrar una amplia variedad de recomendaciones literarias.
+            Nos esforzamos por ofrecer una selección diversa que satisfaga los gustos de todo tipo de lectores, independientemente de sus
+            intereses literarios. No importa si eres un ávido lector o alguien que busca su próxima gran aventura literaria, nuestro
+            recomendador de libros tiene algo especial para ti.</p>
+            <p>Te invitamos a participar activamente en nuestra comunidad, sugiriendo tus libros favoritos y descubriendo nuevas lecturas
+            a través de las recomendaciones de otros usuarios. Compartir tus experiencias literarias no solo enriquece tu propio mundo,
+            sino que también puede iluminar el camino de otros lectores en busca de nuevas historias. Al formar parte de esta comunidad,
+            estás contribuyendo a la creación de un espacio donde la literatura se celebra y se comparte. Así que no dudes en explorar,
+            sugerir y, sobre todo, disfrutar de todo lo que nuestro recomendador de libros tiene para ofrecer. Esperamos que este sitio se
+            convierta en tu punto de referencia para todas tus necesidades literarias, donde siempre encontrarás algo que despierte tu
+            curiosidad y satisfaga tu amor por los libros.</p>
+        </div>
     </section>
 
     <footer>
@@ -148,10 +184,11 @@
     <!--Codigo de JavaScript para el Contenedor de Imagenes-->
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js' type='text/javascript'></script>
 
-    <script type="text/javascript">//<![CDATA[
-        $(function () {
+    <script type="text/javascript">
+        //<![CDATA[
+        $(function() {
             $('#slider div:gt(0)').hide();
-            setInterval(function () {
+            setInterval(function() {
                 $('#slider div:first-child').fadeOut(0)
                     .next('div').fadeIn(1000)
                     .end().appendTo('#slider');

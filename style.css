@@ -282,7 +282,7 @@ section article.reco2 span.subtit {
 }
 
 /*color de titulo*/
-section article.experimento h2 {
+section article.reco2 h2 {
 	color: #154419;
 }
 
@@ -310,6 +310,67 @@ section article.reco2 div ul li {
 }
 
 /*
+
+/*-----------------------
+	TEMA FORMULARIO SUGERIR
+	------------------------*/
+
+.contenedor {
+
+	max-width: 900px;
+	/* Define el ancho máximo del contenedor */
+	margin: 5px 5% 10px 8%;
+	/* Ajusta los márgenes: 20px arriba y abajo, 10% a la derecha, 15% a la izquierda */
+	padding: 10px;
+	/* Añade espacio interno */
+	background-color: #f4f4f4;
+	/* Color de fondo del contenedor */
+	border: 1px solid #ccc;
+	/* Borde del contenedor */
+	border-radius: 8px;
+	/* Bordes redondeados */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	/* Sombra para darle profundidad */
+
+}
+
+/* Estilo para aumentar el espacio entre los labels y los inputs */
+form label {
+	display: block;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+	width: 100%;
+	margin-top: 5px;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+
+.contenedor2 {
+	max-width: 1100px;
+	/* Define el ancho máximo del contenedor */
+	margin: 20px 5% 1px 5%; /* Ajusta los márgenes: 20px arriba y abajo, 10% a la derecha, 15% a la izquierda */
+	padding: 20px;
+	/* Añade espacio interno */
+	background-color: #f4f4f4;
+	/* Color de fondo del contenedor */
+	border: 1px solid #ccc;
+	/* Borde del contenedor */
+	border-radius: 8px;
+	/* Bordes redondeados */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	/* Sombra para darle profundidad */
+	background-color: #e5e5e5;
+}
+
+/*
+
+
 ---------------------------
 Temas de Colores para los Articulos
 ---------------------------
