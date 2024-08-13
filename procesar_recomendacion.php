@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="recomendador.php">Recomendador de libros</a></li>
-                <li><a href="sugerir.html">Sugerir Libros</a></li>
+                <li><a href="sugerir.php">Sugerir Libros</a></li>
             </ul>
         </nav>
     </header>
