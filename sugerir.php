@@ -12,6 +12,36 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 
+<?php
+
+// Verificar la conexión
+include 'config.php';
+// Función para generar opciones en el menú desplegable
+function getOptions($conn, $column) { // recibe el parametro de la conexion y el nombre de la columna de la tabla
+    $sql = "SELECT DISTINCT $column FROM Sugerencias"; //Hace un select de la columna
+    $result = $conn->query($sql);//Guarda el resultado de la consulta
+    $options = "";
+    while ($row = $result->fetch_assoc()) { //Recorre cada registro
+        $options .= "<option value='" . htmlspecialchars($row[$column]) . "'>" . htmlspecialchars($row[$column]) . "</option>";
+    }//Crea una opcion desplegable segun lo que encuentre en la base de datos
+    return $options;
+}
+
+// Obtener opciones para los selects
+$nombre_libros_options = getOptions($conn, 'nombre_libro'); // Guarda en la variable $nombre_libros_options, los nombres de los libros existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$autor_libros_options = getOptions($conn, 'autor_libro'); // Guarda en la variable $autores_options, los nombres de los autores existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$descripcion_libros_options = getOptions($conn, 'descripcion_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$genero_libros_options = getOptions($conn, 'genero_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$anio_publicaciones_options = getOptions($conn, 'anio_publicacion');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$idioma_libros_options = getOptions($conn, 'idioma_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$editorial_libros_options = getOptions($conn, 'editorial_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$recomendaciones_options = getOptions($conn, 'recomendacion');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$nombre_usuarios_options = getOptions($conn, 'nombre_usuario');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+$email_usuarios_options = getOptions($conn, 'email_usuario');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
+// Cerrar la conexión
+$conn->close();
+?>
+
 <body>
     <header>
         <figure>
@@ -144,10 +174,10 @@
                 </select>
 
                 <label for="editorial_libro">Editorial:</label>
-                <input type="text" id="editorial_libro" name="editorial_libro">
+                <input type="text" id="editorial_libro" name="editorial_libro" required>
 
                 <label for="recomendacion">¿Por qué recomiendas este libro?</label>
-                <textarea id="recomendacion" name="recomendacion"></textarea>
+                <textarea id="recomendacion" name="recomendacion" required></textarea>
 
                 <label for="nombre_usuario">Tu nombre (opcional):</label>
                 <input type="text" id="nombre_usuario" name="nombre_usuario">
@@ -162,19 +192,19 @@
             <!-- Párrafos adicionales -->
             <h2>Sobre Nuestro Recomendador de Libros</h2>
             <p>Nuestro recomendador de libros es una herramienta creada por un grupo de apasionados lectores con el objetivo de ayudar a
-            otros a encontrar nuevas lecturas. Creemos que la literatura es una puerta abierta a innumerables mundos y queremos compartir
-            esa experiencia con todos. Desde novelas de ficción que te transportan a universos desconocidos, hasta ensayos que te hacen
-            reflexionar sobre la condición humana, en nuestro sitio puedes encontrar una amplia variedad de recomendaciones literarias.
-            Nos esforzamos por ofrecer una selección diversa que satisfaga los gustos de todo tipo de lectores, independientemente de sus
-            intereses literarios. No importa si eres un ávido lector o alguien que busca su próxima gran aventura literaria, nuestro
-            recomendador de libros tiene algo especial para ti.</p>
+                otros a encontrar nuevas lecturas. Creemos que la literatura es una puerta abierta a innumerables mundos y queremos compartir
+                esa experiencia con todos. Desde novelas de ficción que te transportan a universos desconocidos, hasta ensayos que te hacen
+                reflexionar sobre la condición humana, en nuestro sitio puedes encontrar una amplia variedad de recomendaciones literarias.
+                Nos esforzamos por ofrecer una selección diversa que satisfaga los gustos de todo tipo de lectores, independientemente de sus
+                intereses literarios. No importa si eres un ávido lector o alguien que busca su próxima gran aventura literaria, nuestro
+                recomendador de libros tiene algo especial para ti.</p>
             <p>Te invitamos a participar activamente en nuestra comunidad, sugiriendo tus libros favoritos y descubriendo nuevas lecturas
-            a través de las recomendaciones de otros usuarios. Compartir tus experiencias literarias no solo enriquece tu propio mundo,
-            sino que también puede iluminar el camino de otros lectores en busca de nuevas historias. Al formar parte de esta comunidad,
-            estás contribuyendo a la creación de un espacio donde la literatura se celebra y se comparte. Así que no dudes en explorar,
-            sugerir y, sobre todo, disfrutar de todo lo que nuestro recomendador de libros tiene para ofrecer. Esperamos que este sitio se
-            convierta en tu punto de referencia para todas tus necesidades literarias, donde siempre encontrarás algo que despierte tu
-            curiosidad y satisfaga tu amor por los libros.</p>
+                a través de las recomendaciones de otros usuarios. Compartir tus experiencias literarias no solo enriquece tu propio mundo,
+                sino que también puede iluminar el camino de otros lectores en busca de nuevas historias. Al formar parte de esta comunidad,
+                estás contribuyendo a la creación de un espacio donde la literatura se celebra y se comparte. Así que no dudes en explorar,
+                sugerir y, sobre todo, disfrutar de todo lo que nuestro recomendador de libros tiene para ofrecer. Esperamos que este sitio se
+                convierta en tu punto de referencia para todas tus necesidades literarias, donde siempre encontrarás algo que despierte tu
+                curiosidad y satisfaga tu amor por los libros.</p>
         </div>
     </section>
 
