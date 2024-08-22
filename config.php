@@ -2,7 +2,7 @@
 // Conectar a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "UfideSQLServer2024*";
+$password = "";
 $dbname = "RecomendadorWeb";
 
 // Crear conexión
