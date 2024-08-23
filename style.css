@@ -232,7 +232,7 @@ section article.reco1,
 section article.reco1 figure img,
 section article.reco1 div,
 section article.reco1 span.subtit {
-	border-color: #B45F04;
+	border-color: #5088d1;
 }
 
 /*color de titulo*/
@@ -244,7 +244,7 @@ section article.reco1 h2 {
 section article.reco1 span.subtit,
 section article.reco1 div,
 section article.reco1 div span {
-	background-color: #B45F04;
+	background-color: #5088d1;
 }
 
 /*color del parrafo*/
@@ -254,13 +254,13 @@ section article.reco1 p {
 
 /*fondo del articulo*/
 section article.reco1 {
-	background-color: #F5DA81;
+	background-color: #5088d1;
 }
 
 /*color de titulo abajo y letras de la lista*/
 section article.reco1 div span,
 section article.reco1 div ul li {
-	color: #190707;
+	color: #5088d1;
 }
 
 /*

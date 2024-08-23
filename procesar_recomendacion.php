@@ -59,7 +59,7 @@ $result = $stmt->get_result(); //Se obtiene el resultado
 
 <section>
         <!--banner lateral noticias-->
-        <div class="noticias">
+        <!-- <div class="noticias">
             <h2>Recomendaciones de la semana</h2>
             <article class="post">
                 <figure>
@@ -104,7 +104,7 @@ $result = $stmt->get_result(); //Se obtiene el resultado
                     el centro de su mundo. Pero hay esqueletos en el armario de la Capitana Marvel, ¡y lo que descubre
                     cambiará su vida por completo!.</p>
             </article>
-        </div>
+        </div> -->
 <body>
     <h1>Resultados de Recomendación</h1>
     <?php

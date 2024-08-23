@@ -23,42 +23,33 @@
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="recomendador.php">Recomendador de libros</a></li>
                 <li><a href="sugerir.php">Sugerir Libros</a></li>
+                <li><a href="bibliotecas.php">Bibliotecas</a></li>
             </ul>
         </nav>
     </header>
-    <!--Slide de Imagenes-->
-    <div id="slideContenedor">
-        <div id="slider">
-            <div class="elemento">
-                <a href="#"><img src="img/slider1.jpeg" alt=""> </a>
-                <p class="frase">"Cien años de soledad" Gabriel García Márquez</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider2.jpeg" alt=""> </a>
-                <p class="frase">"1984" George Orwell</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider3.jpeg" alt=""> </a>
-                <p class="frase">"Orgullo y prejuicio" Jane Austen</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider4.jpeg" alt=""> </a>
-                <p class="frase">"El hombre en busca de sentido" Viktor Frankl</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider5.jpeg" alt=""> </a>
-                <p class="frase">"El temor de un hombre sabio" Patrick Rothfuss</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider6.jpeg" alt=""> </a>
-                <p class="frase">"Sapiens: De animales a dioses" Yuval Noah Harari</p>
-            </div>
-            <div class="elemento">
-                <a href="#"><img src="img/slider7.jpeg" alt=""> </a>
-                <p class="frase">"El Principito" Antoine de Saint-Exupéry</p>
-            </div>
+
+    <div class="contenedor2">
+            <!-- Párrafos adicionales -->
+            <h2>Sobre Nuestro Recomendador de Libros</h2>
+            <p>Nuestro recomendador de libros es una herramienta creada por un grupo de apasionados lectores con el objetivo de ayudar a
+                otros a encontrar nuevas lecturas. Creemos que la literatura es una puerta abierta a innumerables mundos y queremos compartir
+                esa experiencia con todos. Desde novelas de ficción que te transportan a universos desconocidos, hasta ensayos que te hacen
+                reflexionar sobre la condición humana, en nuestro sitio puedes encontrar una amplia variedad de recomendaciones literarias.
+                Nos esforzamos por ofrecer una selección diversa que satisfaga los gustos de todo tipo de lectores, independientemente de sus
+                intereses literarios. No importa si eres un ávido lector o alguien que busca su próxima gran aventura literaria, nuestro
+                recomendador de libros tiene algo especial para ti.</p>
+            <p>Te invitamos a participar activamente en nuestra comunidad, sugiriendo tus libros favoritos y descubriendo nuevas lecturas
+                a través de las recomendaciones de otros usuarios. Compartir tus experiencias literarias no solo enriquece tu propio mundo,
+                sino que también puede iluminar el camino de otros lectores en busca de nuevas historias. Al formar parte de esta comunidad,
+                estás contribuyendo a la creación de un espacio donde la literatura se celebra y se comparte. Así que no dudes en explorar,
+                sugerir y, sobre todo, disfrutar de todo lo que nuestro recomendador de libros tiene para ofrecer. Esperamos que este sitio se
+                convierta en tu punto de referencia para todas tus necesidades literarias, donde siempre encontrarás algo que despierte tu
+                curiosidad y satisfaga tu amor por los libros.</p>
         </div>
-    </div>
+        <p>
+        <p>
+        <p>
+        <p>
     
     <section>
         <!--banner lateral noticias-->

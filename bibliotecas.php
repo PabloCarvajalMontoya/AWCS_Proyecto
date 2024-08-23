@@ -13,7 +13,7 @@
         <figure>
             <img src="img/header2.jpg" alt="Recomendador Libros">
         </figure>
-        <h1>¡Encuentra la bibloteca más cercana de acuerdo a tu Provincia!</h1>
+        <h1>¡Encuentra tu bibloteca más cercana!</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
