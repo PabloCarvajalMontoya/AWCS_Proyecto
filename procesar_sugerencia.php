@@ -66,7 +66,7 @@
 
 
     // Configurar el correo electrónico
-    $para = "brandonbonilla43@gmail.com";
+    $para = "josejb425@gmail.com";
     $asunto = "Nueva Sugerencia de Libro";
     $mensaje = "
     Se ha recibido una nueva sugerencia de libro:
@@ -84,8 +84,8 @@
 ";
 
    // // Enviar el correo electrónico
-   $headers = "From: brandonbonilla43@gmail.com\r\n";
-   $headers .= "Reply-To: brandonbonilla43@gmail.com\r\n";
+   $headers = "From: josejb425@gmail.com\r\n";
+   $headers .= "Reply-To: josejb425@gmail.com\r\n";
    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     if (mail($para, $asunto, $mensaje, $headers)) {

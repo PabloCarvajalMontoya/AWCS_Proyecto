@@ -10,6 +10,8 @@
     <!--fuente de Googlefonts-->
     <link href="http://fonts.googleapis.com/css?family=indie+flower" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="script.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <?php
@@ -62,18 +64,18 @@ $conn->close();
         
         <div class="contenedor">
             <h1>Sugerir un Libro</h1>
-            <form action="procesar_sugerencia.php" method="post">
+            <form id="formSugerir" action="procesar_sugerencia.php" method="post">
                 <label for="nombre_libro">Nombre del libro:</label>
-                <input type="text" id="nombre_libro" name="nombre_libro" required>
+                <input type="text" id="nombre_libro" name="nombre_libro">
 
                 <label for="autor_libro">Autor del libro:</label>
-                <input type="text" id="autor_libro" name="autor_libro" required>
+                <input type="text" id="autor_libro" name="autor_libro" >
 
                 <label for="descripcion_libro">Breve descripción:</label>
-                <textarea id="descripcion_libro" name="descripcion_libro" required></textarea>
+                <textarea id="descripcion_libro" name="descripcion_libro" ></textarea>
 
                 <label for="genero_libro">Género literario:</label>
-                <select id="genero_libro" name="genero_libro" required>
+                <select id="genero_libro" name="genero_libro" >
                     <option value="ficcion">Ficción</option>
                     <option value="no_ficcion">No ficción</option>
                     <option value="fantasia">Fantasía</option>
@@ -83,20 +85,20 @@ $conn->close();
                 </select>
 
                 <label for="anio_publicacion">Año de publicación:</label>
-                <input type="number" id="anio_publicacion" name="anio_publicacion" required>
+                <input type="number" id="anio_publicacion" name="anio_publicacion" >
 
                 <label for="idioma_libro">Idioma:</label>
-                <select id="idioma_libro" name="idioma_libro" required>
+                <select id="idioma_libro" name="idioma_libro" >
                     <option value="espanol">Español</option>
                     <option value="ingles">Inglés</option>
                     <option value="otros">Otros</option>
                 </select>
 
                 <label for="editorial_libro">Editorial:</label>
-                <input type="text" id="editorial_libro" name="editorial_libro" required>
+                <input type="text" id="editorial_libro" name="editorial_libro" >
 
                 <label for="recomendacion">¿Por qué recomiendas este libro?</label>
-                <textarea id="recomendacion" name="recomendacion" required></textarea>
+                <textarea id="recomendacion" name="recomendacion" ></textarea>
 
                 <label for="nombre_usuario">Tu nombre (opcional):</label>
                 <input type="text" id="nombre_usuario" name="nombre_usuario">
