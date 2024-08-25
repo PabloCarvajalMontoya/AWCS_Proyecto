@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="es">
+<?php
+include 'config.php';
+?>
 
 <head>
     <title> Recomendador Libros </title>
@@ -13,36 +16,6 @@
     <script src="./js/jquery-3.7.1.js"></script>
     <script src="./js/script.js"></script>
 </head>
-
-<?php
-
-// Verificar la conexión
-include 'config.php';
-// Función para generar opciones en el menú desplegable
-function getOptions($conn, $column) { // recibe el parametro de la conexion y el nombre de la columna de la tabla
-    $sql = "SELECT DISTINCT $column FROM Sugerencias"; //Hace un select de la columna
-    $result = $conn->query($sql);//Guarda el resultado de la consulta
-    $options = "";
-    while ($row = $result->fetch_assoc()) { //Recorre cada registro
-        $options .= "<option value='" . htmlspecialchars($row[$column]) . "'>" . htmlspecialchars($row[$column]) . "</option>";
-    }//Crea una opcion desplegable segun lo que encuentre en la base de datos
-    return $options;
-}
-
-// Obtener opciones para los selects
-$nombre_libros_options = getOptions($conn, 'nombre_libro'); // Guarda en la variable $nombre_libros_options, los nombres de los libros existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$autor_libros_options = getOptions($conn, 'autor_libro'); // Guarda en la variable $autores_options, los nombres de los autores existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$descripcion_libros_options = getOptions($conn, 'descripcion_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$genero_libros_options = getOptions($conn, 'genero_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$anio_publicaciones_options = getOptions($conn, 'anio_publicacion');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$idioma_libros_options = getOptions($conn, 'idioma_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$editorial_libros_options = getOptions($conn, 'editorial_libro');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$recomendaciones_options = getOptions($conn, 'recomendacion');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$nombre_usuarios_options = getOptions($conn, 'nombre_usuario');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-$email_usuarios_options = getOptions($conn, 'email_usuario');// Guarda en la variable $generos_options, los nombres de los generos existentes despues de recorrer la tabla y asi tener mas opciones en el menu desplegable
-// Cerrar la conexión
-$conn->close();
-?>
 
 <body>
     <header>
