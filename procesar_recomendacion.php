@@ -21,9 +21,9 @@
         <nav>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="recomendador.php">Recomendador de libros</a></li>
                 <li><a href="sugerir.php">Sugerir Libros</a></li>
                 <li><a href="bibliotecas.php">Bibliotecas</a></li>
+                <li><a href="ingresar.php">Iniciar Sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -106,26 +106,31 @@ $result = $stmt->get_result(); //Se obtiene el resultado
             </article>
         </div> -->
 <body>
-    <h1>Resultados de Recomendación</h1>
+<h1>Resultados de Recomendación</h1>
     <?php
-    if ($result->num_rows > 0) { //Validar si existen registros con el resultado obtenido en la consulta
-        while ($row = $result->fetch_assoc()) { //Recorre cada fila que encontró en el resultado
-            //Se imprime la información. htmlspecialchars lo que hace es evitar problemas con caracteres especiales
+    if ($result->num_rows > 0) { // Validar si existen registros con el resultado obtenido en la consulta
+        while ($row = $result->fetch_assoc()) { // Recorre cada fila que encontró en el resultado
+            // Se imprime la información. htmlspecialchars lo que hace es evitar problemas con caracteres especiales
             echo "<h2>Detalles del libro:</h2>";
             echo "<p><strong>Nombre:</strong> " . htmlspecialchars($row["nombre_libro"]) . "</p>";
             echo "<p><strong>Autor:</strong> " . htmlspecialchars($row["autor"]) . "</p>";
             echo "<p><strong>Género:</strong> " . htmlspecialchars($row["genero"]) . "</p>";
             echo "<p><strong>Sinopsis:</strong> " . htmlspecialchars($row["sinopsis"]) . "</p>";
-            echo "<p><strong></strong> <img src='" . htmlspecialchars($row["imagen"]) . "' alt='" . htmlspecialchars($row["nombre_libro"]) . "'></p>";
+            
+            // Verificar si hay una imagen disponible
+            $imagen = htmlspecialchars($row["imagen"]);
+            if (!empty($imagen)) {
+                echo "<p><strong>Imagen:</strong> <img src='" . $imagen . "' alt='" . htmlspecialchars($row["nombre_libro"]) . "'></p>";
+            } else {
+                echo "<p><strong>Imagen:</strong> Imagen no disponible</p>";
+            }
         }
     } else {
         echo "<p>No se encontraron resultados para los criterios seleccionados.</p>";
     }
-
-    // Cerrar la conexión
-    $stmt->close();
-    $conn->close();
     ?>
+
+
 </body>
 
 </html>

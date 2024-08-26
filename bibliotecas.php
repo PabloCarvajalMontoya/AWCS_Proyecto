@@ -9,19 +9,31 @@
     <script type="text/javascript" src="jquery-3.7.1.js"></script>
 </head>
 <body>
-<header>
+    <header>
         <figure>
             <img src="img/header2.jpg" alt="Recomendador Libros">
         </figure>
-        <h1>¡Encuentra tu bibloteca más cercana!</h1>
+        <h1>Recomendador Libros</h1>
+        <?php
+        session_start();
+        ?>
+
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="recomendador.php">Recomendador de libros</a></li>
-                <li><a href="sugerir.php">Sugerir Libros</a></li>
-                <li><a href="bibliotecas.php">Bibliotecas</a></li>
+                <?php if (isset($_SESSION['usuario'])): ?>
+                    <li><a href="agregar_libro.php">Añadir libros</a></li>
+                    <li><a href="libros.php">Ver Libros</a></li>
+                    <li><a href="ver_sugerencias.php">Ver Sugerencias</a></li>
+                    <li><a href="salir.php">Salir</a></li>
+                <?php else: ?>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="recomendador.php">Recomendador de libros</a></li>
+                    <li><a href="sugerir.php">Sugerir Libros</a></li>
+                    <li><a href="ingresar.php">Iniciar Sesión</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
+
     </header>
     <!-- <h1>¡Encuentra la bibloteca más cercana de acuerdo a tu Provincia!</h1> -->
     <form id="form-buscar-bibliotecas">

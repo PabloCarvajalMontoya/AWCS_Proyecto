@@ -2,7 +2,7 @@
 // Conectar a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "Tucson08";
+$password = "";
 $dbname = "RecomendadorWeb";
 
 // Crear conexión

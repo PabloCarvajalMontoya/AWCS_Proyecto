@@ -38,6 +38,16 @@ CREATE TABLE bibliotecas (
     FOREIGN KEY (provincia_id) REFERENCES provincias(id)
 );
 
+CREATE TABLE usuario (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email varchar(50) NOT NULL,
+  password varchar(100) NOT NULL,
+  name varchar(50) NOT NULL
+);
+
+-- admin@email.com 123456
+INSERT INTO usuario (email, password, name) VALUES
+('admin@email.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq', 'Admin');
 
 INSERT INTO Libros (nombre_libro, autor, genero, sinopsis, imagen) 
 VALUES ('Bajo un cielo Blanco', 'Elizabeth Kolbert', 'Ensayo', 'Elizabeth Kolbert reflexiona sobre el mundo que hemos creado y los cambios que hemos ocasionado en nuestro planeta. En su recorrido habla con especialistas biólogos, físicos, ingenieros de distintas partes del mundo que, con distintos proyectos, tratan de hacer un mundo más sostenible.', 
@@ -82,6 +92,24 @@ VALUES ('El señor de los anillos', 'J. R. R. Tolkien', 'Ficción de aventuras',
 INSERT INTO Libros (nombre_libro, autor, genero, sinopsis, imagen) 
 VALUES ('Rayuela', 'Julio Cortázar', 'Ficción', 'El amor turbulento de Oliveira y La Maga, los amigos del Club de la Serpiente, las caminatas por Paría en busca del cielo y el infierno tienen su reverso en la aventura simétrica de Oliveira, Talira y Traveler en un Buenos Aires teñido por el recuerdo.', 
 'img/Rayuela.jpg');
+
+INSERT INTO Libros (nombre_libro, autor, genero, sinopsis, imagen) 
+VALUES ('Los cuentos de mi tía Panchita', 'Carmen Lyra', 'Cuento', 'Es una colección de veintitrés cuentos de hadas que tradicionalmente se han agrupado en dos partes: los cuentos de la tía Panchita y los cuentos de tío Conejo', 
+'img/mitia.jpg');
+
+INSERT INTO Libros (nombre_libro, autor, genero, sinopsis, imagen) 
+VALUES ('Leyendas ticas y otras vainas', 'María Mayela Padilla Monge', 'Cuento', 'Una recopilación de algunas historias relacionadas con las tradiciones de Costa Rica', 
+'img/leyendasticas.jpg');
+
+INSERT INTO Libros (nombre_libro, autor, genero, sinopsis, imagen) 
+VALUES ('Leyendo leyendas', 'Pedro Núñez Martínez', 'Cuento', 'Esta obra es el resultado de una oportuna amalgama de pasión por la historia patria y de añoranza de las memorias de infancia de su autor. En ella desfilan, sazonados con amenas y pertinentes referencias historiográficas y geográficas, algunos de los personajes más célebres de las leyendas costarricenses.', 
+'img/leyendoleye.jpg');
+
+INSERT INTO Libros (nombre_libro, autor, genero, sinopsis, imagen) 
+VALUES ('El resplandor', 'Stephen King', 'Novela', 'Al escritor Jack Torrance le es ofrecido un empleo como cuidador del hotel Overlook durante el invierno junto a su familia. ', 
+'img/resplandor.jpg');
+
+
 
 INSERT INTO provincias (nombre) VALUES
 ('San Jose'),
