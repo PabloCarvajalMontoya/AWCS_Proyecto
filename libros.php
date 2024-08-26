@@ -39,6 +39,7 @@ $resultado = $conn->query($sql);
                     <li><a href="agregar_libro.php">Añadir libros</a></li>
                     <li><a href="libros.php">Ver Libros</a></li>
                     <li><a href="ver_sugerencias.php">Ver Sugerencias</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                     <li><a href="salir.php">Salir</a></li>
                 <?php else: ?>
                     <li><a href="recomendador.php">Recomendador de libros</a></li>
